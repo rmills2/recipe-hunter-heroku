@@ -1,0 +1,56 @@
+
+assignment_2.rb
+  should detect distinct domains
+  should print the correct count of distinct domains
+  should sort domains when printing out results (FAILED - 1)
+  should avoid non-preferred iterators
+    should not use `loop`
+    should not use `for in`
+  should right-justify each row when printing out results
+    should use rjust (FAILED - 2)
+    should not print any domain name at left-most position (FAILED - 3)
+    should ensure each right-justified line has same number of characters (FAILED - 4)
+
+Failures:
+
+  1) assignment_2.rb should sort domains when printing out results
+     Failure/Error: expect(results).not_to include(false)
+
+       expected [true, true, false] not to include false
+       Diff:
+       @@ -1,2 +1,2 @@
+       -[false]
+       +[true, true, false]
+     # ./assignment2_spec.rb:48:in `block (2 levels) in <top (required)>'
+
+  2) assignment_2.rb should right-justify each row when printing out results should use rjust
+     Failure/Error: expect(code.match(/.*\.rjust/)).to_not be_nil
+
+       expected: not nil
+            got: nil
+     # ./assignment2_spec.rb:53:in `block (3 levels) in <top (required)>'
+
+  3) assignment_2.rb should right-justify each row when printing out results should not print any domain name at left-most position
+     Failure/Error: expect(indices).to_not include 0
+       expected [0, 0, 0] not to include 0
+     # ./assignment2_spec.rb:65:in `block (3 levels) in <top (required)>'
+
+  4) assignment_2.rb should right-justify each row when printing out results should ensure each right-justified line has same number of characters
+     Failure/Error: expect(line_chars.uniq.length).to eq 1
+
+       expected: 1
+            got: 2
+
+       (compared using ==)
+     # ./assignment2_spec.rb:76:in `block (3 levels) in <top (required)>'
+
+Finished in 0.03 seconds (files took 0.31 seconds to load)
+8 examples, 4 failures
+
+Failed examples:
+
+rspec ./assignment2_spec.rb:38 # assignment_2.rb should sort domains when printing out results
+rspec ./assignment2_spec.rb:52 # assignment_2.rb should right-justify each row when printing out results should use rjust
+rspec ./assignment2_spec.rb:56 # assignment_2.rb should right-justify each row when printing out results should not print any domain name at left-most position
+rspec ./assignment2_spec.rb:68 # assignment_2.rb should right-justify each row when printing out results should ensure each right-justified line has same number of characters
+
