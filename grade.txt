@@ -1,0 +1,41 @@
+#<HTTParty::Response:0x2790e40 parsed_response="{\"title\":\"Recipe Puppy\",\"version\":0.1,\"href\":\"http:\\/\\/www.recipepuppy.com\\/\",\"results\":[{\"title\":\"Tim and Tracy's Chocolate Cake (Boiled)\",\"href\":\"http:\\/\\/www.recipezaar.com\\/Tim-and-Tracys-Chocolate-Cake-Boiled-259680\",\"ingredients\":\"baking soda, butter, cocoa powder, eggs, flour, sugar, water\",\"thumbnail\":\"http:\\/\\/img.recipepuppy.com\\/34464.jpg\"},{\"title\":\"Chocolate Chocolate Chocolate Butterscotch Chip Cookies Recipe\",\"href\":\"http:\\/\\/www.grouprecipes.com\\/50195\\/chocolate-chocolate-chocolate-butterscotch-chip-cookies.html\",\"ingredients\":\"cocoa powder, baking soda, brown sugar, butterscotch chips, eggs, flour, milk chocolate, salt, semisweet chocolate chips, sugar, vanilla extract\",\"thumbnail\":\"http:\\/\\/img.recipepuppy.com\\/231970.jpg\"},{\"title\":\"Chocolate Cake With Fruits Recipe\",\"href\":\"http:\\/\\/www.grouprecipes.com\\/43318\\/chocolate-cake-with-fruits.html\",\"ingredients\":\"baking powder, baking soda, chocolate cake, eggs, frosting, vanilla extract, vanilla extract, salt, salt\",\"thumbnail\":\"http:\\/\\/img.recipepuppy.com\\/304911.jpg\"},{\"title\":\"Chocolate Chip Cookies\",\"href\":\"http:\\/\\/www.recipezaar.com\\/Chocolate-Chip-Cookies-146432\",\"ingredients\":\"flour, baking soda, chocolate, eggs, brown sugar, corn syrup, nuts, salt, semisweet chocolate, butter, vanilla bean, sugar\",\"thumbnail\":\"http:\\/\\/img.recipepuppy.com\\/306284.jpg\"},{\"title\":\"Chocolate-Dipped Brownie Bites (Brownies)\",\"href\":\"http:\\/\\/www.recipezaar.com\\/Chocolate-Dipped-Brownie-Bites-Brownies-264833\",\"ingredients\":\"flour, baking soda, butter, eggs, chocolate, salt, semisweet chocolate chips, shortening, sugar, vanilla extract, water\",\"thumbnail\":\"http:\\/\\/img.recipepuppy.com\\/311066.jpg\"},{\"title\":\"Darn Good Chocolate Cake ( Cake Mix Cake)\",\"href\":\"http:\\/\\/www.recipezaar.com\\/Darn-Good-Chocolate-Cake-Cake-Mix-Cake-87205\",\"ingredients\":\"frosting, cake mix, eggs, chocolate pudding, sour cream, vegetable oil, water\",\"thumbnail\":\"http:\\/\\/img.recipepuppy.com\\/42112.jpg\"},{\"title\":\"Angelina?s Hot Chocolate\",\"href\":\"http:\\/\\/www.recipezaar.com\\/Angelinas-Hot-Chocolate-334398\",\"ingredients\":\"chocolate, water, milk, sugar, water, whipped cream\",\"thumbnail\":\"http:\\/\\/img.recipepuppy.com\\/62411.jpg\"},{\"title\":\"Chocolate Chip Oaties (Cookies)\",\"href\":\"http:\\/\\/www.recipezaar.com\\/Chocolate-Chip-Oaties-Cookies-212253\",\"ingredients\":\"flour, baking powder, butter, eggs, brown sugar, milk, rolled oat, semisweet chocolate chips, cocoa powder, vanilla extract\",\"thumbnail\":\"http:\\/\\/img.recipepuppy.com\\/306502.jpg\"},{\"title\":\"Chocolate Chocolate Chocolate Cashew Cookies (with Raisins)\",\"href\":\"http:\\/\\/www.recipezaar.com\\/Chocolate-Chocolate-Chocolate-Cashew-Cookies-with-Raisins-115515\",\"ingredients\":\"baking soda, brown sugar, butter, chocolate, eggs, flour, margarine, milk chocolate chips, raisins, salt, semisweet chocolate chips, sugar, cocoa powder, vanilla extract, white chocolate chips\",\"thumbnail\":\"http:\\/\\/img.recipepuppy.com\\/306822.jpg\"},{\"title\":\"Double Chocolate Cookies &amp; Mint Chocolate Variation\",\"href\":\"http:\\/\\/www.recipezaar.com\\/Double-Chocolate-Cookies-Mint-Chocolate-Variation-275188\",\"ingredients\":\"flour, cocoa powder, baking soda, butter, eggs, salt, semisweet chocolate chips, sugar, vanilla extract\",\"thumbnail\":\"http:\\/\\/img.recipepuppy.com\\/363913.jpg\"}]}", @response=#<Net::HTTPOK 200 OK readbody=true>, @headers={"date"=>["Fri, 06 Oct 2017 11:38:17 GMT"], "server"=>["Apache/2.2.9 (Ubuntu) PHP/5.2.6-2ubuntu4.6 with Suhosin-Patch mod_ssl/2.2.9 OpenSSL/0.9.8g mod_wsgi/4.5.7 Python/2.6"], "x-powered-by"=>["PHP/5.2.6-2ubuntu4.6"], "set-cookie"=>["kohanasession=2d081706886bc36b0cf134bf8e5261c4; expires=Fri, 06 Oct 2017 13:38:17 GMT; path=/", "kohanasession=2d081706886bc36b0cf134bf8e5261c4; expires=Fri, 06-Oct-2017 13:38:17 GMT; path=/", "kohanasession_data=c2Vzc2lvbl9pZHxzOjMyOiIyZDA4MTcwNjg4NmJjMzZiMGNmMTM0YmY4ZTUyNjFjNCI7dG90YWxfaGl0c3xpOjE7X2tmX2ZsYXNoX3xhOjA6e311c2VyX2FnZW50fHM6NDoiUnVieSI7aXBfYWRkcmVzc3xzOjEzOiIxNzMuNjcuMTk4LjYyIjtsYXN0X2FjdGl2aXR5fGk6MTUwNzI4OTg5Nzs%3D; expires=Fri, 06-Oct-2017 13:38:17 GMT; path=/"], "expires"=>["Thu, 19 Nov 1981 08:52:00 GMT"], "cache-control"=>["no-store, no-cache, must-revalidate, post-check=0, pre-check=0"], "pragma"=>["no-cache"], "vary"=>["Accept-Encoding"], "content-length"=>["893"], "connection"=>["close"], "content-type"=>["text/javascript"]}>
+
+DbApi
+  implements method_missing
+  does not implement any other methods
+  overrides default method_missing
+  .method_missing
+    loads YAML file
+    stores `students` class variable or class instance variable
+    selects 5992 students greater than 190 pounds
+    selects 1163 students from Texas
+
+Recipe
+  must mix in HTTParty
+  has a base_uri
+  has default_params for onlyImages
+    has :onlyImages key
+    has value of 1 of :onlyImages
+  .for
+    implements `for` method
+    GETs from http://www.recipepuppy.com/api with keyword & onlyImages passed as params
+    GETs correct number of results (FAILED - 1)
+
+Failures:
+
+  1) Recipe.for GETs correct number of results
+     Failure/Error: expect(@recipes.size).to eq(10) # stubbed response
+
+       expected: 10
+            got: 4
+
+       (compared using ==)
+     # ./recipe_spec.rb:49:in `block (3 levels) in <top (required)>'
+
+Finished in 3.2 seconds (files took 1.59 seconds to load)
+14 examples, 1 failure
+
+Failed examples:
+
+rspec ./recipe_spec.rb:46 # Recipe.for GETs correct number of results
+
