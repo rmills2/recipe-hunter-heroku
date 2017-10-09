@@ -1,0 +1,16 @@
+<h1>Recipes for <%= @keyword %></h1>
+
+<table border='1'>
+	<tr>
+		<th>Recipe Title</th>
+		<th>Picture</th>
+		<th>Ingredients</th>
+	</tr>
+	<% @results.each do |result| %>
+		<tr>
+			<td><%= link_to sanitize(result["title"]), result["href"] %></td>
+			<td><%= link_to image_tag(result["thumbnail"]) %></td>
+			<td><%= result["ingredients"] %></td>
+		</tr>
+	<% end %>
+	</table>
